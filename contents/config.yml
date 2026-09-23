@@ -22,6 +22,10 @@ sections:
     nav: PUBLICATIONS
     title: PUBLICATIONS
     icon: bi-file-text-fill
+  - id: patents
+    nav: PATENTS
+    title: PATENTS
+    icon: bi-lightbulb-fill
   - id: awards
     nav: AWARDS
     title: AWARDS
