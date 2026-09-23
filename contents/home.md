@@ -2,7 +2,7 @@ He is currently a Fellow in the Department of Earth and Planetary Sciences (EPS)
 
 #### Contact
 
-Email: user[at]fas.harvard.edu
+Email: hanqing.liu@bit.edu.cn
 
 #### Education
 M.E., Intelligent Science and Technology, Beijing Institute of Technology, 2026—.\
