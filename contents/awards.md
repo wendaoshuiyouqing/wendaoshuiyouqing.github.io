@@ -1,12 +1,11 @@
+- 2022–2023 Academic Year: Awarded the Second-Class Scholarship and Outstanding Student Leader at Nanchang University.
 
-- Outstanding Graduate Award (CUMT), 2025.
+- 2023–2024 Academic Year: Awarded the Second-Class Scholarship and Outstanding Student Leader at Nanchang University.
 
-- National Scholarship for Graduate Students (Ministry of Education, China), 2024.
+- 2024–2025 Academic Year: Awarded the First-Class Scholarship and Outstanding Student at Nanchang University.
 
-- First-Prize Graduate Academic Scholarship (CUMT), 2023 & 2024.
+- 2024–2025 Academic Year: Selected as an Outstanding Graduate and awarded Outstanding Undergraduate Thesis at Nanchang University.
 
-- Outstanding Undergraduate Thesis Award (Jiangsu, China), 2022.
+- Provincial Undergraduate Innovation and Entrepreneurship Training Program: Led and successfully completed one provincial-level project.
 
-- First-Prize Corporate Scholarship (CUMT), 2020.
-
-- First-Prize Undergraduate Academic Scholarship (CUMT), 2019.
+- 21st International Conference on Computational Intelligence and Security (CIS 2025): Recipient of the Best Paper Award.
