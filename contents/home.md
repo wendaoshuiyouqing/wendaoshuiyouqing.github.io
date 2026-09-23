@@ -1,4 +1,4 @@
-He is currently a Fellow in the Department of Earth and Planetary Sciences (EPS) at Harvard University.
+I am currently a M.E. student in Intelligent Science and Technology at Beijing Institute of Technology. His research interests lie in artificial intelligence and intelligent science, with a focus on machine learning and intelligent systems
 
 #### Contact
 
@@ -9,4 +9,4 @@ M.E., Intelligent Science and Technology, Beijing Institute of Technology, 2026â
 B.E., Computer Science and Technology, Nanchang University, 2022â€”2026.
 
 #### Research Interests
-Machine Learning for Seismology; Foundation Model; Observational Seismology; Microseismic Monitoring
+Machine Learning; Artificial Intelligence; Intelligent Science; Intelligent Systems
