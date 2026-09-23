@@ -1,4 +1,4 @@
-I am currently a M.E. student in Intelligent Science and Technology at Beijing Institute of Technology. His research interests lie in artificial intelligence and intelligent science, with a focus on machine learning and intelligent systems
+I am currently a M.E. student in Intelligent Science and Technology at Beijing Institute of Technology. My research interests lie in artificial intelligence and intelligent science, with a focus on machine learning and intelligent systems
 
 #### Contact
 
