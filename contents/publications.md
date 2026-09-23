@@ -5,4 +5,4 @@
 #### Published
 - Pang M, Xiao M, <strong>Han L</strong>, et al. FacePoseDiff: Hierarchical Diffusion Control for Multi-Pose Face Synthesis with Identity Preservation[C]//2025 21st International Conference on Computational Intelligence and Security (CIS). IEEE, 2025: 1-5.(Best Paper Award)
 
-- <strong>刘汉青</strong>, 廖浩然, 肖敏华, 庞孟*, 基于Prompt与ControlNet协同的人脸姿态转向方法，中国科学: 技术科学, http://engine.scichina.com/doi/10.1360/SST-2025-0177, (2025).[[Paper]](http://engine.scichina.com/doi/10.1360/SST-2025-0177)
+- <strong>LIU H Q</strong>, LIAO H R, XIAO M H, et al. Pose-controllable face synthesis via Prompt and ControlNet collaboration[J]. SCIENTIA SINICA Technologica, 2025.[[Paper]](http://engine.scichina.com/doi/10.1360/SST-2025-0177)
