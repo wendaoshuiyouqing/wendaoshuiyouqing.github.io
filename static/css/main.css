@@ -10,7 +10,6 @@
 
 body {
     background: #ffffff;
-    font-family: Arial, sans-serif;
 }
 
 .header {
@@ -178,6 +177,7 @@ section header h2 {
 }
 
 section .main-body {
+    font-family: Arial, sans-serif !important;
     font-size: 1.3rem;
     font-weight: 200;
     line-height: 2.4rem;
