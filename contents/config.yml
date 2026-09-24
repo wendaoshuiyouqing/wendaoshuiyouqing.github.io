@@ -30,3 +30,7 @@ sections:
     nav: AWARDS
     title: AWARDS
     icon: bi-award-fill
+  - id: internships
+    nav: INTERNSHIPS
+    title: INTERNSHIPS
+    icon: bi-briefcase-fill
