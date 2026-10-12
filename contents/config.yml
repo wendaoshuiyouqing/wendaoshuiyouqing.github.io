@@ -15,22 +15,22 @@ license-link:
   href: https://github.com/senli1073/senli1073.github.io/blob/main/LICENSE
 sections:
   - id: home
-    nav: HOME
+    nav: Home
     title: Hanqing Liu&ensp;|&ensp;刘汉青
     href: '#page-top' # Default to '#<id>' if not specified
   - id: publications
-    nav: PUBLICATIONS
-    title: PUBLICATIONS
+    nav: Publications
+    title: Publications
     icon: bi-file-text-fill
   - id: patents
-    nav: PATENTS
-    title: PATENTS
+    nav: Patents
+    title: Patents
     icon: bi-lightbulb-fill
   - id: awards
-    nav: AWARDS
-    title: AWARDS
+    nav: Awards
+    title: Awards
     icon: bi-award-fill
   - id: internships
-    nav: INTERNSHIPS
-    title: INTERNSHIPS
+    nav: Internships
+    title: Internships
     icon: bi-briefcase-fill
