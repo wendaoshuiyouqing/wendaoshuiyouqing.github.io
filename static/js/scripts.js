@@ -162,6 +162,16 @@ function renderSections(sections) {
         header.appendChild(title);
         container.appendChild(header);
         container.appendChild(body);
+        if (section.id === 'home') {
+            const portrait = document.createElement('div');
+            portrait.id = 'avatar';
+            const photo = document.createElement('img');
+            photo.src = 'static/assets/img/photo.png';
+            photo.alt = 'Hanqing Liu — profile photo';
+            portrait.appendChild(photo);
+            container.appendChild(portrait);
+        }
+
         sectionElement.appendChild(container);
         sectionsContainer.appendChild(sectionElement);
     });
