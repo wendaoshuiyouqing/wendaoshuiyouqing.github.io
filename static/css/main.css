@@ -1,25 +1,17 @@
 @import "./styles.css";
 
-
+/* Academic palette and locally available typefaces. */
 :root {
-    --h-title-color: #3948d2;
+    --h-title-color: #203e59;
     --top-section-overlay: 0.52;
-    --skeleton-base: #e4e7eb;
+    --skeleton-base: #e8edf1;
     --skeleton-highlight: #f5f7fa;
-}
-
-body {
-    background: #ffffff;
-}
-
-.header {
-    border-bottom: solid 2px var(--bs-blue);
-    z-index: 10000;
+    --academic-font: Arial, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .page-skeleton {
     position: fixed;
-    top: 25rem;
+    top: 17rem;
     right: 0;
     bottom: 0;
     left: 0;
@@ -97,173 +89,79 @@ body {
     }
 }
 
-.bg-bottom {
-    background-color: var(--h-title-color);
+
+body { background: #fff; color: #334155; font-family: var(--academic-font); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--academic-font); }
+.container { max-width: 1060px; }
+.container.px-5 { padding-left: 2rem !important; padding-right: 2rem !important; }
+.header { border-bottom: 1px solid #e2e8ee; z-index: 10000; }
+#mainNav { background: #fff; padding: 1rem 0; box-shadow: none !important; }
+#mainNav .navbar-brand { font-family: var(--academic-font); color: #203e59; font-size: 1.15rem; }
+#mainNav .navbar-nav .nav-item .nav-link { font-size: .75rem; font-weight: 600; letter-spacing: .06em; color: #536273; margin-right: .55rem !important; }
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+#mainNav .navbar-nav .nav-item .nav-link.active { color: #1f5b82; }
+#mainNav .navbar-toggler { color: #334155; border-color: #d8e0e7; }
+a { color: #245e85; text-decoration: none; }
+a:hover { color: #153d5a; text-decoration: underline; text-underline-offset: .2em; }
+a:focus-visible, button:focus-visible { outline: 3px solid #588bb2; outline-offset: 4px; }
+
+/* A quiet banner leaves more room for the academic profile. */
+.top-section { position: relative; height: 17rem; padding: 0; overflow: hidden; background: #203e59; display: flex; align-items: center; }
+.top-section-content { position: relative; z-index: 2; width: 100%; padding-top: 4rem; }
+#top-section-bg-text { font-family: var(--academic-font) !important; font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 400; line-height: 1.35 !important; max-width: 34rem; letter-spacing: .01em; margin: 0; }
+.top-section-bg { position: absolute; inset: 0; background-position: center; background-size: cover; opacity: 0; transition: opacity 1200ms ease; }
+.top-section-bg-active { opacity: 1; }
+.top-section::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(18, 38, 56, .88), rgba(18, 38, 56, var(--top-section-overlay))); }
+.site-loading .top-section { background: linear-gradient(135deg, #edf0f3, #f8f9fb); }
+.site-loading .top-section::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, transparent, #ffffff40, transparent); animation: skeleton-shimmer 1450ms ease-in-out infinite; }
+
+/* Home: text and portrait share a stable grid instead of an overlapping float. */
+#sections > section { padding: 3rem 0; scroll-margin-top: 5rem; }
+.bg-gradient-primary-to-secondary-light,
+.bg-gradient-primary-to-secondary-gray { background: #fff !important; }
+#sections > section + section > .container { border-top: 1px solid #e2e8ee; padding-top: 2.6rem; }
+#sections > section + section { padding-top: 0; }
+section header h2 { font-family: var(--academic-font) !important; color: var(--h-title-color); font-size: 1.35rem; font-weight: 600; line-height: 1.5; letter-spacing: .025em; margin: 0 0 1.3rem; }
+section header h2 .bi { display: none; }
+section .main-body { font-family: var(--academic-font) !important; font-size: 1rem; font-weight: 400; line-height: 1.85; text-align: left; overflow-wrap: anywhere; }
+section .main-body strong { font-weight: 700 !important; color: #203e59; }
+.main-body p { margin-bottom: 1rem; }
+.main-body h4 { font-size: 1rem; font-weight: 700; color: #203e59; margin: 1.65rem 0 .55rem; }
+.main-body ul { padding-left: 1.25rem; margin-bottom: 0; }
+.main-body li { padding-left: .3rem; margin-bottom: 1.1rem; }
+.main-body li:last-child { margin-bottom: 0; }
+.main-body li::marker { color: #6e879a; }
+.main-body li p { margin-bottom: .35rem; }
+#home > .container { display: grid; grid-template-columns: minmax(0, 1fr) 170px; column-gap: 3.5rem; align-items: start; }
+#home header { grid-column: 1; grid-row: 1; }
+#home header h2 { font-size: clamp(1.7rem, 3vw, 2.1rem); letter-spacing: 0; margin-bottom: 1.2rem; }
+#home .main-body { grid-column: 1; grid-row: 2; }
+#avatar { grid-column: 2; grid-row: 1 / span 2; margin-top: .3rem; }
+#avatar img { width: 100%; height: auto; display: block; border-radius: 5px; border: 1px solid #e2e8ee; padding: 5px; background: #fff; box-shadow: none !important; }
+.bg-bottom { background: #f6f8fa; border-top: 1px solid #e2e8ee; }
+footer.py-5 { padding: 1.8rem 0 !important; }
+footer .text-white-50 { color: #657487 !important; }
+footer a { font-size: .8rem; }
+
+@media (max-width: 991px) {
+    #mainNav .navbar-nav .nav-item .nav-link { padding: .6rem 0; }
+    #mainNav .navbar-nav { margin-right: 0 !important; }
 }
-
-.top-section {
-    position: relative;
-    padding: 10rem 0;
-    height: 25rem;
-    overflow: hidden;
-    background-color: #18202a;
+@media (max-width: 575px) {
+    .container.px-5 { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+    .top-section { height: 14rem; }
+    .page-skeleton { top: 14rem; }
+    #home > .container { grid-template-columns: minmax(0, 1fr) 96px; column-gap: 1rem; }
+    #home header { grid-row: 1; align-self: center; }
+    #home header h2 { font-size: 1.4rem; }
+    #avatar { grid-row: 1; margin: 0 0 1.5rem; }
+    #home .main-body { grid-column: 1 / -1; grid-row: 2; }
+    #sections > section { padding: 2rem 0; }
+    section header h2 { font-size: 1.2rem; }
+    section .main-body { font-size: .95rem; line-height: 1.8; }
 }
-
-.site-loading .top-section {
-    background:
-        linear-gradient(90deg, rgba(255, 255, 255, 0.12), rgba(231, 235, 240, 0.16)),
-        linear-gradient(135deg, #edf0f3, #f8f9fb);
-}
-
-.top-section h2 {
-    font-weight: 400;
-}
-
-.top-section .top-section-content {
-    position: relative;
-    z-index: 2;
-}
-
-.top-section-bg {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background-position: center;
-    background-size: cover;
-    opacity: 0;
-    transform: scale(1.03);
-    transition: opacity 1200ms ease, transform 7000ms ease;
-}
-
-.top-section-bg-active {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.top-section:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background:
-        linear-gradient(90deg, rgba(0, 0, 0, calc(var(--top-section-overlay) + 0.12)), rgba(0, 0, 0, var(--top-section-overlay))),
-        linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.36));
-}
-
-.site-loading .top-section:before {
-    background:
-        linear-gradient(90deg, rgba(255, 255, 255, 0.24), rgba(222, 227, 234, 0.2)),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(222, 227, 234, 0.16));
-}
-
-.site-loading .top-section::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    transform: translateX(-100%);
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    animation: skeleton-shimmer 1450ms ease-in-out infinite;
-}
-
-section header h2 {
-    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-    color: var(--h-title-color);
-    font-size: 2.3rem;
-    line-height: 4rem;
-}
-
-section .main-body {
-    font-family: Arial, sans-serif !important;
-    font-size: 1.3rem;
-    font-weight: 200;
-    line-height: 2.4rem;
-    text-align: justify;
-}
-
-section .main-body strong {
-    font-weight: 700 !important;
-}
-
-/* Content column: 80% of the viewport on large screens (10% whitespace
-   each side), capped at 1200px for readability on very wide screens.
-   Bootstrap's own caps are 960/1140/1320px at lg/xl/xxl. */
-@media (min-width: 992px) {
-    .container {
-        max-width: min(1150px, 80vw);
-    }
-}
-
-
-.bg-gradient-primary-to-secondary-light {
-    background: linear-gradient(45deg, #fcfcfc, #ffffff) !important;
-}
-
-.bg-gradient-primary-to-secondary-gray {
-    background: linear-gradient(45deg, #f0f0f0, #f1f1f1) !important;
-}
-
-
-
-.on-top {
-    position: relative;
-    z-index: 10000;
-}
-
-.top-bg {
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.top-bg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-}
-
-
-#avatar {
-    position: relative;
-    height: 0;
-    top: min(-65px, max(-100px, calc(-1*100vw/12)));
-    max-width: 55em;
-    margin: 0 1.5rem 0 0;
-    float: right;
-    z-index: 9000;
-}
-
-#avatar img {
-    width: min(180px, max(130px, calc(100vw / 6)));
-    height: auto;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-@media screen and (max-width: 991px) {
-    #avatar {
-        margin: 0;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
-    .top-section-bg {
-        transition: none;
-        transform: none;
-    }
-
-    .page-skeleton {
-        transition: none;
-    }
-
-    .skeleton-block::after {
-        animation: none;
-    }
+    html { scroll-behavior: auto; }
+    .top-section-bg, .page-skeleton { transition: none; }
+    .skeleton-block::after, .site-loading .top-section::after { animation: none; }
 }
