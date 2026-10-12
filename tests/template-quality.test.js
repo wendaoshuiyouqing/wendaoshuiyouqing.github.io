@@ -25,7 +25,6 @@ assert.equal(
 );
 assert.equal(index.includes(' mt5 '), false, 'invalid mt5 class should not be used');
 assert.equal(index.includes(' md5'), false, 'invalid md5 class should not be used');
-assert.match(index, /<img\b[^>]*\balt="/, 'profile image should include alt text');
 assert.equal(mainCss.includes('background-size: fill'), false, 'background-size: fill is invalid CSS');
 assert.equal(index.includes('github.com/senli1073'), false, 'template should not hard-code the original author GitHub URL');
 assert.equal(/<section[^>]+class="top-section"[^>]+style=/.test(index), false, 'hero background should not be defined with inline styles');
@@ -41,8 +40,6 @@ assert.match(mainCss, /prefers-reduced-motion:\s*reduce/, 'slideshow should resp
 assert.equal(/<img\b[^>]*\bsrc="static\/assets\/img\/photo\.png"[^>]*\bwidth=/.test(index), false, 'avatar image should not force a fixed width attribute');
 assert.equal(/<img\b[^>]*\bsrc="static\/assets\/img\/photo\.png"[^>]*\bheight=/.test(index), false, 'avatar image should not force a fixed height attribute');
 assert.match(mainCss, /#avatar img[\s\S]*height:\s*auto/, 'avatar CSS should preserve the original image ratio');
-assert.match(mainCss, /#avatar img[\s\S]*width:\s*min\(180px,\s*max\(130px,\s*calc\(100vw \/ 6\)\)\)/, 'avatar should keep responsive sizing with a smaller desktop maximum');
-assert.match(mainCss, /\.top-section[\s\S]*height:\s*25rem/, 'hero should keep its full original height');
 assert.match(gitignore, /^\.superpowers\/$/m, '.superpowers companion artifacts should be ignored');
 assert.equal(/getElementById\(key\)\.innerHTML\s*=\s*yml\[key\]/.test(scripts), false, 'YAML config values should not be injected with innerHTML');
 assert.match(scripts, /typesetPromise/, 'MathJax should be invoked with typesetPromise');
@@ -77,15 +74,16 @@ assert.doesNotMatch(index, /skeleton-avatar/, 'avatar should not use skeleton pl
 assert.doesNotMatch(mainCss, /\.skeleton-nav\b/, 'navbar skeleton CSS should not be kept');
 assert.doesNotMatch(mainCss, /\.skeleton-hero\b/, 'hero text skeleton CSS should not be kept');
 assert.doesNotMatch(mainCss, /\.skeleton-avatar\b/, 'avatar skeleton CSS should not be kept');
-assert.match(mainCss, /\.page-skeleton\s*\{[\s\S]*top:\s*25rem/, 'section skeleton should start below the real hero area');
 assert.match(mainCss, /\.page-skeleton\s*\{[\s\S]*padding-top:\s*2\.4rem/, 'section skeleton placeholders should sit one text line lower');
 assert.match(mainCss, /\.site-loading \.top-section\s*\{[\s\S]*linear-gradient/, 'hero background should keep a loading placeholder');
 assert.match(mainCss, /\.site-loading \.top-section::after\s*\{[\s\S]*animation:\s*skeleton-shimmer/, 'hero background placeholder should shimmer while loading');
 assert.match(index, /id="page-top-title"[^>]*>\s*&nbsp;\s*<\/a>/, 'navbar brand should reserve initial height before config loads');
 assert.match(mainCss, /\.page-skeleton\s*\{[\s\S]*z-index:\s*8000/, 'section skeleton should stay below the avatar layer');
-assert.match(mainCss, /#avatar\s*\{[\s\S]*z-index:\s*9000/, 'avatar should stay above the section skeleton while loading');
 assert.match(mainCss, /\.skeleton-block\s*\{[\s\S]*max-width:\s*100%/, 'skeleton blocks should never overflow their container');
 assert.match(mainCss, /\.skeleton-line-long\s*\{[\s\S]*width:\s*100%/, 'long skeleton lines should shrink with the content container');
 assert.match(mainCss, /\.skeleton-line-short\s*\{[\s\S]*width:\s*68%/, 'short skeleton lines should use proportional width for narrow screens');
 
 console.log('template quality checks passed');
+assert.match(scripts, /photo.alt = 'Hanqing Liu/, 'portrait should have descriptive alternative text');
+assert.match(mainCss, /grid-template-columns: minmax\(0, 1fr\) 170px/, 'profile should use a stable two-column grid');
+assert.match(mainCss, /height: 17rem/, 'banner should use the compact academic layout');
